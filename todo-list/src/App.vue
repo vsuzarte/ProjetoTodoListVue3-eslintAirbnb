@@ -11,6 +11,7 @@
         @removerTask="removerTask"
         @mudarEstado="mudarEstado"
       />
+      <InfoList/>
     </div>
   </main>
 </template>
@@ -21,10 +22,13 @@ import NewTask from './components/NewTask.vue';
 import TaskGrid from './components/TaskGrid.vue';
 import ITask from './interfaces/ITask';
 import ProgressBar from './components/ProgressBar.vue';
+import InfoList from './components/InfoList.vue';
 
 export default defineComponent({
   name: 'App',
-  components: { NewTask, TaskGrid, ProgressBar },
+  components: {
+    NewTask, TaskGrid, ProgressBar, InfoList,
+  },
   data() {
     return {
       tasks: [] as ITask[],
